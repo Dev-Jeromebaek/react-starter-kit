@@ -1,0 +1,49 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "jsx-a11y", "import"],
+  "rules": {
+    // https://eslint.org/docs/rules/require-jsdoc
+    "require-jsdoc": [
+      0,
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": false,
+          "FunctionExpression": false
+        }
+      }
+    ],
+    // https://eslint.org/docs/rules/valid-jsdoc
+    "valid-jsdoc": [
+      1,
+      {
+        "requireReturn": false
+      }
+    ],
+    "no-unused-vars": 1,
+    // individual
+    "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": 0
+  }
+}
