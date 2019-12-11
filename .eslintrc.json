@@ -7,7 +7,13 @@
     "node": true,
     "jest": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:testing-library/recommended",
+    "plugin:testing-library/react"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -44,6 +50,15 @@
     "no-unused-vars": 1,
     // individual
     "react/jsx-filename-extension": 0,
-    "react/jsx-one-expression-per-line": 0
+    "react/jsx-one-expression-per-line": 0,
+
+    // testing-library --- https://github.com/Belco90/eslint-plugin-testing-library
+    "testing-library/await-async-query": "error",
+    "testing-library/await-fire-event": "warn",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debug": "warn",
+    "testing-library/no-dom-import": "warn",
+    "testing-library/prefer-expect-query-by": "warn",
+    "testing-library/prefer-explicit-assert": "warn"
   }
 }

@@ -71,9 +71,10 @@ eslint-plugin-react@^7.14.3 eslint-config-airbnb@latest eslint@^5.16.0 || ^6.1.0
 
 - `babel-eslint`
 - `eslint-config-prettier`
+- `eslint-plugin-testing-library`
 
 ```shell
-$ yarn add --dev babel-eslint eslint-config-prettier
+$ yarn add --dev babel-eslint eslint-config-prettier eslint-plugin-testing-library
 ```
 
 
@@ -94,7 +95,13 @@ $ yarn add --dev babel-eslint eslint-config-prettier
     "node": true,
     "jest": true
   },
-  "extends": ["airbnb", "prettier"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:testing-library/recommended",
+    "plugin:testing-library/react"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -131,7 +138,16 @@ $ yarn add --dev babel-eslint eslint-config-prettier
     "no-unused-vars": 1,
     // individual
     "react/jsx-filename-extension": 0,
-    "react/jsx-one-expression-per-line": 0
+    "react/jsx-one-expression-per-line": 0,
+
+    // testing-library --- https://github.com/Belco90/eslint-plugin-testing-library
+    "testing-library/await-async-query": "error",
+    "testing-library/await-fire-event": "warn",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debug": "warn",
+    "testing-library/no-dom-import": "warn",
+    "testing-library/prefer-expect-query-by": "warn",
+    "testing-library/prefer-explicit-assert": "warn"
   }
 }
 ```
