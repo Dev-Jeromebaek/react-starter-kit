@@ -36,7 +36,7 @@ $ npx create-react-app [프로젝트명]
 - `stylelint`
 
 ```shell
-$ yarn add --dev eslint pretiier stylelint
+$ yarn add --dev eslint prettier stylelint
 ```
 
 

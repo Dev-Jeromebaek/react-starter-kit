@@ -7,7 +7,7 @@
     "node": true,
     "jest": true
   },
-  "extends": ["airbnb", "prettier"],
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
